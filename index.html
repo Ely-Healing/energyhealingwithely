@@ -3,31 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Energieheilung - [Dein Name]</title>
+    <title>Energieheilung - Cranio-Fernsitzungen</title>
+
+    <!-- Google Fonts: Schöne Schriftart -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5dc; /* Beige Hintergrundfarbe */
             margin: 0;
             padding: 0;
+            color: #333;
+            background-image: url('Foto.jpg'); /* Füge hier dein Hintergrundbild ein */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
         header {
-            background-color: #4caf50;
-            color: white;
-            padding: 15px;
             text-align: center;
+            padding: 50px;
+            color: white;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        header img {
+            width: 150px;
+            border-radius: 50%;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            margin: 20px 0;
+        }
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #4caf50;
         }
         section {
             padding: 20px;
-            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 20px;
+            border-radius: 10px;
         }
-        h1, h2 {
-            color: #333;
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
         }
-        .services, .contact {
-            margin: 20px 0;
-        }
-        .services button, .contact button {
+        .button {
             background-color: #4caf50;
             color: white;
             padding: 10px 20px;
@@ -35,70 +58,206 @@
             cursor: pointer;
             border-radius: 5px;
         }
-        .services button:hover, .contact button:hover {
-            background-color: #45a049;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-        }
-        input, textarea {
+        form input, form textarea {
+            width: 100%;
             padding: 10px;
-            width: 80%;
-            max-width: 400px;
+            margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
         }
+        form button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
         footer {
+            text-align: center;
+            padding: 10px;
             background-color: #333;
             color: white;
-            text-align: center;
-            padding: 10px 0;
             position: fixed;
             bottom: 0;
             width: 100%;
+        }
+        .about, .reviews {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgba(255, 255, 255, 0.9);
+            margin: 20px 0;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        .about img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        .reviews {
+            text-align: left;
+        }
+        .review {
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 5px solid #4caf50;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Energieheilung mit [Ely]</h1>
-    <p>Finde deine innere Balance und Heilung durch Cranio-Energiearbeit</p>
+    <img src="logo.jpg" alt="Logo"> <!-- Füge hier dein Logo ein -->
+    <h1>Cranio-Fernsitzungen mit Ely</h1>
 </header>
 
+<!-- Über mich Bereich -->
 <section class="about">
-    <h2>Über mich</h2>
-    <p>Ich bin [Ely], spezialisiert auf Energieheilung. Mit jahrelanger Erfahrung unterstütze ich Menschen dabei, ihr inneres Gleichgewicht zu finden und Heilung auf physischer, emotionaler und spiritueller Ebene zu erfahren.</p>
+    <img src="me.jpg" alt="me"> <!-- Füge hier dein Bild ein -->
+    <div class="content">
+        <h2>Über mich</h2>
+        <p>Ich bin Ely, spezialisiert auf Energieheilung und Cranio-Fernsitzungen. Mit jahrelanger Erfahrung und einer tiefen Verbindung zur energetischen Arbeit helfe ich Menschen, ihre innere Balance zu finden und Heilung auf emotionaler, mentaler und körperlicher Ebene zu erfahren.</p>
+        <p>Meine Mission ist es, dich auf deiner Reise zu begleiten und mit meiner Expertise in der Energieheilung und Cranio-Arbeit einen Raum für Heilung und Wachstum zu schaffen. Jede Sitzung wird individuell auf deine Bedürfnisse abgestimmt. Ich bin Mutter von 3 wundervollen Kinder, Mathematikerin und Künstlerin.</p>
+    </div>
 </section>
 
-<section class="services">
-    <h2>Meine Dienstleistungen</h2>
-    <p>Ich biete verschiedene Sitzungen an, um dich auf deiner Reise zu unterstützen:</p>
-    <ul>
-        <li>Cranio-Heilung</li>
-        <li>Cranio-Fern-Sitzungen</li>
-        <li>Life-Coaching in schwierigen Lebenssituationen</li>
-    </ul>
-    <button onclick="alert('Termine können telefonisch oder per E-Mail gebucht werden!')">Termin buchen</button>
+<!-- Abschnitt zur Cranio-Fernsitzung -->
+<section>
+    <div class="content">
+        <h2>Über Cranio-Fernsitzungen</h2>
+        <p>Cranio-Fernsitzungen basieren auf der Annahme, dass das menschliche Energiesystem auch über große Distanzen hinweg harmonisiert werden kann. Durch den achtsamen Fokus und die energetische Verbindung können Blockaden im Körper gelöst und das Gleichgewicht wiederhergestellt werden.</p>
+<p>Cranio-Sacrale Energiearbeit kann bei einer Vielzahl von physischen, emotionalen und psychischen Problemen unterstützend wirken. Hier sind einige Beispiele, bei denen diese Heilungsmethode angewendet werden kann:
+
+Physische Probleme
+
+Chronische Schmerzen:
+Rückenschmerzen
+Nackenschmerzen
+Gelenkschmerzen
+
+Migräne und Kopfschmerzen:
+Spannungskopfschmerzen
+Clusterkopfschmerzen
+
+Verletzungen und postoperative Erholung:
+Sportverletzungen
+Erholung nach Operationen
+
+Schlafstörungen:
+Unruhiger Schlaf
+
+Kiefergelenksstörungen:
+Schmerzen und Spannungen im Kiefer
+Zähneknirschen (Bruxismus)
+
+Emotionale und Psychische Probleme
+Stress und Angst:
+Allgemeine Angststörungen
+Stressbewältigung
+Depression:
+Unterstützung bei depressiven Episoden
+Verbesserung des allgemeinen emotionalen Wohlbefindens
+Trauma:
+Verarbeitung von traumatischen Erlebnissen
+Unterstützung bei posttraumatischen Belastungsstörungen
+Emotionale Blockaden:
+Hilfe beim Loslassen von unterdrückten Emotionen
+Förderung des emotionalen Gleichgewichts
+
+Allgemeine Gesundheitsförderung
+Stärkung des Immunsystems:
+Förderung der natürlichen Abwehrkräfte des Körpers
+Unterstützung bei chronischen Krankheiten
+
+Verbesserung der Körperwahrnehmung:
+Erhöhung des Bewusstseins für den eigenen Körper
+Förderung von Achtsamkeit und Körperbewusstsein
+
+Förderung der Selbstheilungskräfte:
+Aktivierung der natürlichen Heilungsprozesse des Körpers
+Unterstützung bei der ganzheitlichen Gesundheitsförderung
+
+Kinder und Säuglinge:
+Unterstützung bei Koliken und Verdauungsproblemen
+Hilfe bei Schlafstörungen
+Unterstützung bei Entwicklungsstörungen und Lernschwierigkeiten
+
+Schwangerschaft und Geburt:
+Unterstützung bei Schwangerschaftsbeschwerden
+Vorbereitung auf die Geburt
+Unterstützung bei der postnatalen Erholung
+
+Ältere Menschen:
+Linderung von Altersbeschwerden
+Unterstützung bei chronischen Krankheiten
+Verbesserung der Lebensqualität
+
+Sterbebettbegleitung.</p>
+
+        <p>Während einer Fernsitzung liegst du bequem in deinem eigenen Raum, und ich konzentriere mich darauf, mit deinem Energiefeld zu arbeiten. Jede Sitzung beginnt mit einem kurzen Vorgespräch, in dem du deine Anliegen oder körperlichen Beschwerden schildern kannst.</p>
+        <p>Die Sitzungen dauern in der Regel 60-90 Minuten, und am Ende erhältst du ein Feedback über den Prozess und die beobachteten energetischen Veränderungen.</p>
+    </div>
 </section>
 
-<section class="contact">
-    <h2>Kontakt</h2>
-    <p>Hast du Fragen oder möchtest du eine Sitzung buchen? Kontaktiere mich gerne über das Formular unten.</p>
-    <form action="mailto:energyhealingwithely@gmail.com" method="post" enctype="text/plain">
-        <input type="text" name="name" placeholder="Dein Name" required>
-        <input type="email" name="email" placeholder="Deine E-Mail" required>
-        <textarea name="message" rows="5" placeholder="Deine Nachricht" required></textarea>
-        <button type="submit">Nachricht senden</button>
-    </form>
+<!-- Terminbuchung -->
+<section>
+    <div class="content">
+        <h2>Terminbuchung</h2>
+        <p>Bitte wähle einen Termin für deine Cranio-Fernsitzung:</p>
+        <form action="mailto:energyhealingwithely@gmail.com" method="post" enctype="text/plain">
+            <label for="date">Datum und Uhrzeit:</label>
+            <input type="datetime-local" id="date" name="termin" required>
+            <input type="text" name="name" placeholder="Dein Name" required>
+            <input type="email" name="email" placeholder="Deine E-Mail" required>
+            <button type="submit" class="button">Termin buchen</button>
+        </form>
+    </div>
+</section>
+
+<!-- Kontaktformular -->
+<section>
+    <div class="content">
+        <h2>Kontaktformular</h2>
+        <p>Für Fragen oder weitere Informationen kannst du mich direkt kontaktieren:</p>
+        <form action="mailto:energyhealimgwithely@beispiel.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Dein Name" required>
+            <input type="email" name="email" placeholder="Deine E-Mail" required>
+            <textarea name="message" rows="5" placeholder="Deine Nachricht" required></textarea>
+            <button type="submit">Nachricht senden</button>
+        </form>
+    </div>
+</section>
+
+<!-- Bewertungen -->
+<section class="reviews">
+    <div class="content">
+        <h2>Kundenbewertungen</h2>
+
+        <div class="review">
+            <p><strong>Maria S.:</strong> "Die Fernsitzung mit Ely hat mir unglaublich geholfen. Ich fühle mich viel ausgeglichener und im Einklang mit mir selbst."</p>
+        </div>
+        <div class="review">
+            <p><strong>Johannes K.:</strong> "Ich war anfangs skeptisch, aber die Ergebnisse sprechen für sich. Nach jeder Sitzung fühle ich mich deutlich entspannter und voller Energie."</p>
+        </div>
+        <div class="review">
+            <p><strong>Sabine R.:</strong> "Die Cranio-Fernsitzungen haben mir geholfen, meine inneren Blockaden zu lösen. Ely ist sehr einfühlsam und professionell."</p>
+        </div>
+ <div class="review">
+            <p><strong>Andrew C.:</strong> "2 Days after the healing session i am feeling totally positiv and patient in my trades. i feel like a burdon got off my shoulders lasting by some thoughts which got wiped out. totally recommended technique."</p>
+        </div>
+
+    </div>
 </section>
 
 <footer>
-    <p>&copy; 2024 [Ely] | Energieheilung</p>
+    <p>&copy; 2024 [Dein Name] - Cranio-Fernsitzungen</p>
 </footer>
 
 </body>
 </html>
+
