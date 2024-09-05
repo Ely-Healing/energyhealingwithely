@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energieheilung - [Dein Name]</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4caf50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .services, .contact {
+            margin: 20px 0;
+        }
+        .services button, .contact button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .services button:hover, .contact button:hover {
+            background-color: #45a049;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        input, textarea {
+            padding: 10px;
+            width: 80%;
+            max-width: 400px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Energieheilung mit [Ely]</h1>
+    <p>Finde deine innere Balance und Heilung durch Cranio-Energiearbeit</p>
+</header>
+
+<section class="about">
+    <h2>Über mich</h2>
+    <p>Ich bin [Ely], spezialisiert auf Energieheilung. Mit jahrelanger Erfahrung unterstütze ich Menschen dabei, ihr inneres Gleichgewicht zu finden und Heilung auf physischer, emotionaler und spiritueller Ebene zu erfahren.</p>
+</section>
+
+<section class="services">
+    <h2>Meine Dienstleistungen</h2>
+    <p>Ich biete verschiedene Sitzungen an, um dich auf deiner Reise zu unterstützen:</p>
+    <ul>
+        <li>Cranio-Heilung</li>
+        <li>Cranio-Fern-Sitzungen</li>
+        <li>Life-Coaching in schwierigen Lebenssituationen</li>
+    </ul>
+    <button onclick="alert('Termine können telefonisch oder per E-Mail gebucht werden!')">Termin buchen</button>
+</section>
+
+<section class="contact">
+    <h2>Kontakt</h2>
+    <p>Hast du Fragen oder möchtest du eine Sitzung buchen? Kontaktiere mich gerne über das Formular unten.</p>
+    <form action="mailto:deine-email@beispiel.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Dein Name" required>
+        <input type="email" name="email" placeholder="Deine E-Mail" required>
+        <textarea name="message" rows="5" placeholder="Deine Nachricht" required></textarea>
+        <button type="submit">Nachricht senden</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2024 [Ely] | Energieheilung</p>
+</footer>
+
+</body>
+</html>
