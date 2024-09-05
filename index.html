@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Energieheilung - Cranio-Fernsitzungen</title>
 
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Energieheilung und Cranio-Fernsitzungen mit Ely. Finde dein inneres Gleichgewicht und erlebe Heilung auf emotionaler, mentaler und körperlicher Ebene.">
+    <meta name="keywords" content="Energieheilung, Cranio, Fernsitzungen, spirituelle Heilung, Ely, Heilarbeit">
+
     <!-- Google Fonts: Elegante Schriftarten -->
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
+        /* Allgemeine Styles */
         body {
             font-family: 'Lora', serif;
             background-color: #f5f5dc; /* Beige Hintergrundfarbe */
@@ -78,7 +83,7 @@
             padding: 10px;
             background-color: #4b0082;
             color: #ffd700;
-            position: fixed;
+            position: relative;
             bottom: 0;
             width: 100%;
         }
@@ -103,20 +108,37 @@
         .review {
             margin-bottom: 20px;
             background-color: #f9f9f9;
-            padding: 15px;
-            border-radius: 5px;
-            border-left: 5px solid #ffd700; /* Goldene Seitenlinie bei Bewertungen */
-        }
-        .language-switch {
-            text-align: right;
             padding: 20px;
-            margin-right: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box Schatten für bessere Trennung */
         }
         .language-switch img {
-            width: 40px; /* Größe der Flaggen */
-            height: 28px;
-            margin: 5px;
+            width: 50px;
+            height: 35px;
+            margin: 10px;
             cursor: pointer;
+        }
+        nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav a {
+            margin: 0 10px;
+            color: #4b0082;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        /* Responsive Anpassungen */
+        @media (max-width: 768px) {
+            h1, h2 {
+                font-size: 36px;
+            }
+            .content {
+                padding: 10px;
+            }
+            img {
+                width: 100px;
+            }
         }
     </style>
 
@@ -143,6 +165,13 @@
     <img src="uk-flagge.png" alt="English" onclick="switchLanguage('en')">
 </div>
 
+<!-- Navigation -->
+<nav>
+    <a href="#about">Über mich</a> | 
+    <a href="#cranio-info">Cranio Sitzungen</a> | 
+    <a href="#kontakt">Kontakt</a>
+</nav>
+
 <header>
     <img src="logo.jpg" alt="Logo"> <!-- Füge hier dein Logo ein -->
     <h1 class="lang-de">Cranio-Fernsitzungen mit Ely</h1>
@@ -150,43 +179,33 @@
 </header>
 
 <!-- Über mich Bereich -->
-<section class="about">
+<section id="about" class="about">
     <img src="me.jpg" alt="me"> <!-- Füge hier dein Bild ein -->
     <div class="content">
         <h2 class="lang-de">Über mich</h2>
         <h2 class="lang-en" style="display: none;">About me</h2>
         <p class="lang-de">Ich bin Ely, spezialisiert auf Energieheilung und Cranio-Fernsitzungen. Mit jahrelanger Erfahrung und einer tiefen Verbindung zur energetischen Arbeit helfe ich Menschen, ihre innere Balance zu finden und Heilung auf emotionaler, mentaler und körperlicher Ebene zu erfahren.</p>
         <p class="lang-en" style="display: none;">I am Ely, specialized in energy healing and cranio remote sessions. With years of experience and a deep connection to energetic work, I help people find their inner balance and experience healing on emotional, mental, and physical levels.</p>
-        <p class="lang-de">Meine Mission ist es, dich auf deiner Reise zu begleiten und mit meiner Expertise in der Energieheilung und Cranio-Arbeit einen Raum für Heilung und Wachstum zu schaffen. Jede Sitzung wird individuell auf deine Bedürfnisse abgestimmt. Ich bin Mutter von 3 wundervollen Kindern, Mathematikerin und Künstlerin.</p>
-        <p class="lang-en" style="display: none;">My mission is to accompany you on your journey and, with my expertise in energy healing and cranio work, create a space for healing and growth. Each session is tailored to your individual needs. I am the mother of 3 wonderful children, a mathematician, and an artist.</p>
+        <p class="lang-de">Meine Mission ist es, dich auf deiner Reise zu begleiten und mit meiner Expertise in der Energieheilung und Cranio-Arbeit einen Raum für Heilung und Wachstum zu schaffen. Jede Sitzung wird individuell auf deine Bedürfnisse abgestimmt.</p>
+        <p class="lang-en" style="display: none;">My mission is to accompany you on your journey and create a space for healing and growth. Each session is tailored to your individual needs.</p>
     </div>
 </section>
 
 <!-- Info zu Cranio -->
-<section>
+<section id="cranio-info">
     <div class="content">
         <h2 class="lang-de">Info zu Cranio-Sacraler Energiearbeit</h2>
         <h2 class="lang-en" style="display: none;">Info about Cranio-Sacral Energy Work</h2>
-        <p class="lang-de">Cranio-Sacrale Energiearbeit kann bei einer Vielzahl von physischen, emotionalen und psychischen Problemen unterstützend wirken. Hier sind einige Beispiele, bei denen diese Heilungsmethode angewendet werden kann:</p>
-        <p class="lang-en" style="display: none;">Cranio-sacral energy work can assist with a variety of physical, emotional, and mental issues. Here are some examples where this healing method can be applied:</p>
+        <p class="lang-de">Cranio-Sacrale Energiearbeit kann bei einer Vielzahl von physischen, emotionalen und psychischen Problemen unterstützend wirken. Hier sind einige Beispiele:</p>
+        <p class="lang-en" style="display: none;">Cranio-sacral energy work can assist with a variety of physical, emotional, and mental issues. Here are some examples:</p>
         <ul>
-            <li class="lang-de"><strong>Physische Probleme:</strong> Chronische Schmerzen (Rücken, Nacken, Gelenke), Migräne und Kopfschmerzen, Schlafstörungen, Kiefergelenksstörungen (Bruxismus), Verletzungen und postoperative Erholung.</li>
-            <li class="lang-en" style="display: none;"><strong>Physical issues:</strong> Chronic pain (back, neck, joints), migraines and headaches, sleep disorders, jaw tension (Bruxism), injury recovery, and post-operative healing.</li>
-            <li class="lang-de"><strong>Emotionale und Psychische Probleme:</strong> Stress und Angst, Depression, Trauma, emotionale Blockaden.</li>
-            <li class="lang-en" style="display: none;"><strong>Emotional and mental issues:</strong> Stress and anxiety, depression, trauma, emotional blockages.</li>
-            <li class="lang-de"><strong>Allgemeine Gesundheitsförderung:</strong> Stärkung des Immunsystems, Förderung der Selbstheilungskräfte, Unterstützung bei chronischen Krankheiten.</li>
-            <li class="lang-en" style="display: none;"><strong>General health promotion:</strong> Boosting the immune system, promoting self-healing, supporting chronic illnesses.</li>
-            <li class="lang-de"><strong>Kinder und Säuglinge:</strong> Hilfe bei Schlafstörungen, Koliken, Entwicklungsstörungen.</li>
-            <li class="lang-en" style="display: none;"><strong>Children and infants:</strong> Help with sleep disorders, colic, developmental issues.</li>
-            <li class="lang-de"><strong>Schwangerschaft und Geburt:</strong> Unterstützung bei Schwangerschaftsbeschwerden, Vorbereitung auf die Geburt, postnatale Erholung.</li>
-            <li class="lang-en" style="display: none;"><strong>Pregnancy and birth:</strong> Support for pregnancy discomfort, preparation for birth, postnatal recovery.</li>
-            <li class="lang-de"><strong>Ältere Menschen:</strong> Linderung von Altersbeschwerden, Verbesserung der Lebensqualität.</li>
-            <li class="lang-en" style="display: none;"><strong>Elderly people:</strong> Relief from age-related complaints, improving quality of life.</li>
-            <li class="lang-de"><strong>Sterbebegleitung:</strong> Unterstützung im Sterbeprozess.</li>
-            <li class="lang-en" style="display: none;"><strong>End-of-life care:</strong> Support in the dying process.</li>
+            <li class="lang-de"><strong>Physische Probleme:</strong> Chronische Schmerzen (Rücken, Nacken, Gelenke), Migräne und Kopfschmerzen.</li>
+            <li class="lang-en" style="display: none;"><strong>Physical issues:</strong> Chronic pain (back, neck, joints), migraines and headaches.</li>
+            <li class="lang-de"><strong>Emotionale und Psychische Probleme:</strong> Stress, Angst, Depression, Trauma.</li>
+            <li class="lang-en" style="display: none;"><strong>Emotional and mental issues:</strong> Stress, anxiety, depression, trauma.</li>
+            <li class="lang-de"><strong>Allgemeine Gesundheitsförderung:</strong> Stärkung des Immunsystems.</li>
+            <li class="lang-en" style="display: none;"><strong>General health promotion:</strong> Boosting the immune system.</li>
         </ul>
-        <p class="lang-de">Es wird empfohlen, direkt 3 Sitzungen zu buchen, um tiefere, langjährige Blockaden zu lösen. Jede Sitzung hilft dabei, die energetischen Blockaden Schicht für Schicht abzutragen und das Wohlbefinden zu verbessern. In einem kostenlosen Beratungsgespräch können wir gemeinsam herausfinden, ob du mehr als eine Sitzung benötigst.</p>
-        <p class="lang-en" style="display: none;">It is recommended to book 3 sessions in advance to resolve deeper, long-standing blockages. Each session helps to remove energetic blockages layer by layer and improve well-being. In a free consultation, we can determine together whether you need more than one session.</p>
     </div>
 </section>
 
@@ -195,12 +214,8 @@
     <div class="content">
         <h2 class="lang-de">Über Cranio-Fernsitzungen</h2>
         <h2 class="lang-en" style="display: none;">About Cranio Remote Sessions</h2>
-        <p class="lang-de">Cranio-Fernsitzungen basieren auf der Annahme, dass das menschliche Energiesystem auch über große Distanzen hinweg harmonisiert werden kann. Durch den achtsamen Fokus und die energetische Verbindung können Blockaden im Körper gelöst und das Gleichgewicht wiederhergestellt werden.</p>
-        <p class="lang-en" style="display: none;">Cranio remote sessions are based on the belief that the human energy system can be harmonized even over long distances. Through mindful focus and energetic connection, blockages in the body can be resolved, and balance can be restored.</p>
-        <p class="lang-de">Während einer Fernsitzung liegst du bequem in deinem eigenen Raum, und ich konzentriere mich darauf, mit deinem Energiefeld zu arbeiten. Jede Sitzung beginnt mit einem kurzen Vorgespräch, in dem du deine Anliegen oder körperlichen Beschwerden schildern kannst.</p>
-        <p class="lang-en" style="display: none;">During a remote session, you lie comfortably in your own space, and I focus on working with your energy field. Each session begins with a brief conversation where you can discuss your concerns or physical complaints.</p>
-        <p class="lang-de">Die Sitzungen dauern in der Regel 60-90 Minuten, und am Ende erhältst du ein Feedback über den Prozess und die beobachteten energetischen Veränderungen.</p>
-        <p class="lang-en" style="display: none;">Sessions typically last 60-90 minutes, and at the end, you will receive feedback on the process and the energetic changes observed.</p>
+        <p class="lang-de">Cranio-Fernsitzungen basieren auf der Annahme, dass das menschliche Energiesystem auch über große Distanzen harmonisiert werden kann.</p>
+        <p class="lang-en" style="display: none;">Cranio remote sessions are based on the belief that the human energy system can be harmonized even over long distances.</p>
     </div>
 </section>
 
@@ -211,7 +226,7 @@
         <h2 class="lang-en" style="display: none;">Book an Appointment</h2>
         <p class="lang-de">Bitte wähle einen Termin für deine Cranio-Fernsitzung:</p>
         <p class="lang-en" style="display: none;">Please choose an appointment for your Cranio remote session:</p>
-        <form action="mailto:energyhealingwithely@gmail.com" method="post" enctype="text/plain">
+        <form action="https://formspree.io/f/moqppdgp" method="post">
             <label for="date" class="lang-de">Datum und Uhrzeit:</label>
             <label for="date" class="lang-en" style="display: none;">Date and time:</label>
             <input type="datetime-local" id="date" name="termin" required>
@@ -226,13 +241,13 @@
 </section>
 
 <!-- Kontaktformular -->
-<section>
+<section id="kontakt">
     <div class="content">
         <h2 class="lang-de">Kontaktformular</h2>
         <h2 class="lang-en" style="display: none;">Contact Form</h2>
         <p class="lang-de">Für Fragen oder weitere Informationen kannst du mich direkt kontaktieren:</p>
         <p class="lang-en" style="display: none;">For questions or further information, you can contact me directly:</p>
-        <form action="mailto:energyhealingwithely@gmail.com" method="post" enctype="text/plain">
+        <form action="https://formspree.io/f/moqppdgp" method="post">
             <input type="text" name="name" placeholder="Dein Name" required class="lang-de">
             <input type="text" name="name" placeholder="Your Name" required class="lang-en" style="display: none;">
             <input type="email" name="email" placeholder="Deine E-Mail" required class="lang-de">
@@ -258,24 +273,26 @@
             <p><strong>Maria S.:</strong> "The remote session with Ely helped me immensely. I feel much more balanced and in harmony with myself."</p>
         </div>
         <div class="review lang-de">
-            <p><strong>Johannes K.:</strong> "Ich war anfangs skeptisch, aber die Ergebnisse sprechen für sich. Nach jeder Sitzung fühle ich mich deutlich entspannter und voller Energie."</p>
+            <p><strong>Johannes K.:</strong> "Ich war anfangs skeptisch, aber die Ergebnisse sprechen für sich."</p>
         </div>
         <div class="review lang-en" style="display: none;">
-            <p><strong>Johannes K.:</strong> "I was initially skeptical, but the results speak for themselves. After each session, I feel significantly more relaxed and energized."</p>
-        </div>
-        <div class="review lang-de">
-            <p><strong>Sabine R.:</strong> "Die Cranio-Fernsitzungen haben mir geholfen, meine inneren Blockaden zu lösen. Ely ist sehr einfühlsam und professionell."</p>
-        </div>
-        <div class="review lang-en" style="display: none;">
-            <p><strong>Sabine R.:</strong> "The cranio remote sessions helped me to release my inner blockages. Ely is very empathetic and professional."</p>
+            <p><strong>Johannes K.:</strong> "I was initially skeptical, but the results speak for themselves."</p>
         </div>
     </div>
 </section>
 
+<!-- Footer -->
 <footer>
     <p class="lang-de">&copy; 2024 Ely - Cranio-Fernsitzungen</p>
     <p class="lang-en" style="display: none;">&copy; 2024 Ely - Cranio Remote Sessions</p>
+
+    <!-- Social Media Links (Platzhalter) -->
+    <div>
+        <a href="https://instagram.com/ely_healing" target="_blank">Instagram</a> |
+        <a href="https://facebook.com/ely_healing" target="_blank">Facebook</a>
+    </div>
 </footer>
 
 </body>
 </html>
+
