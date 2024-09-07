@@ -9,18 +9,17 @@
     <meta name="description" content="Energieheilung und Cranio-Fernsitzungen mit Ely. Finde dein inneres Gleichgewicht und erlebe Heilung auf emotionaler, mentaler und körperlicher Ebene.">
     <meta name="keywords" content="Energieheilung, Cranio, Fernsitzungen, spirituelle Heilung, Ely, Heilarbeit">
 
-    <!-- Google Fonts: Elegante Schriftarten -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
-        /* Allgemeine Styles */
         body {
             font-family: 'Lora', serif;
-            background-color: #f5f5dc; /* Beige Hintergrundfarbe */
+            background-color: #f5f5dc;
             margin: 0;
             padding: 0;
-            color: #4b0082; /* Dunkelviolett für den Text */
-            background-image: url('Foto.jpg'); /* Füge hier dein Hintergrundbild ein */
+            color: #4b0082;
+            background-image: url('Foto.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -28,7 +27,7 @@
         header {
             text-align: center;
             padding: 50px;
-            color: #ffd700; /* Goldene Schriftfarbe für Header */
+            color: #ffd700;
             background: rgba(0, 0, 0, 0.6);
         }
         header img {
@@ -43,7 +42,7 @@
         h2 {
             font-family: 'Great Vibes', cursive;
             font-size: 42px;
-            color: #ffd700; /* Goldene Farbe für Überschriften */
+            color: #ffd700;
         }
         section {
             padding: 20px;
@@ -56,14 +55,14 @@
             margin: 0 auto;
         }
         .button {
-            background-color: #4b0082; /* Dunkelvioletter Button */
+            background-color: #4b0082;
             color: white;
             padding: 10px 20px;
             border: none;
             cursor: pointer;
             border-radius: 5px;
         }
-        form input, form textarea {
+        form input, form select, form textarea {
             width: 100%;
             padding: 10px;
             margin: 10px 0;
@@ -81,36 +80,24 @@
         footer {
             text-align: center;
             padding: 20px;
-            background: rgba(0, 0, 0, 0.6); /* Leicht durchsichtiger dunkler Hintergrund, wie der Header */
+            background: rgba(0, 0, 0, 0.6);
             color: #ffd700;
             position: relative;
             bottom: 0;
             width: 100%;
         }
-        .about, .reviews {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            background-color: rgba(255, 255, 255, 0.9);
-            margin: 20px 0;
-            padding: 30px;
-            border-radius: 10px;
-        }
-        .about img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-        }
         .reviews {
-            text-align: left;
+            margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
         }
         .review {
             margin-bottom: 20px;
             background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box Schatten für bessere Trennung */
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 5px solid #ffd700;
         }
         .language-switch img {
             width: 50px;
@@ -128,7 +115,6 @@
             text-decoration: none;
             font-size: 18px;
         }
-        /* Responsive Anpassungen */
         @media (max-width: 768px) {
             h1, h2 {
                 font-size: 36px;
@@ -143,6 +129,41 @@
     </style>
 
     <script>
+        function updatePrice() {
+            var service = document.getElementById('service').value;
+            var priceField = document.getElementById('price');
+            var price;
+
+            if (service === 'Life Coaching') {
+                price = '30 Euro (30 Minuten)';
+            } else if (service === 'Cranio-Sitzung') {
+                price = '100 Euro';
+            } else if (service === 'Notfall-Craniositzung') {
+                price = '199 Euro';
+            } else {
+                price = 'Kostenlos';
+            }
+
+            priceField.value = price;
+        }
+
+        function restrictTimes() {
+            var input = document.getElementById('date');
+            var today = new Date().toISOString().split('T')[0];
+            input.setAttribute('min', today);
+
+            input.addEventListener('change', function () {
+                var selectedDate = new Date(input.value);
+                var day = selectedDate.getDay();
+                var time = selectedDate.getHours();
+
+                if (day === 0 || day === 6 || time < 9 || time > 16) {
+                    alert('Termine sind nur von Montag bis Freitag zwischen 9:00 und 16:00 Uhr möglich.');
+                    input.value = '';
+                }
+            });
+        }
+
         function switchLanguage(language) {
             var elementsDe = document.querySelectorAll('.lang-de');
             var elementsEn = document.querySelectorAll('.lang-en');
@@ -157,7 +178,7 @@
         }
     </script>
 </head>
-<body onload="switchLanguage('de')">
+<body onload="restrictTimes()">
 
 <!-- Sprachumschaltung mit Flaggen -->
 <div class="language-switch">
@@ -173,12 +194,11 @@
 </nav>
 
 <header>
-    <img src="logo.jpg" alt="Logo"> <!-- Füge hier dein Logo ein -->
+    <img src="logo.jpg" alt="Logo"> <!-- Dein Logo -->
     <h1 class="lang-de">Cranio-Fernsitzungen mit Ely</h1>
     <h1 class="lang-en" style="display: none;">Cranio Remote Sessions with Ely</h1>
 </header>
 
-<!-- Über mich Bereich -->
 <section id="about" class="about">
     <img src="me.jpg" alt="me"> <!-- Füge hier dein Bild ein -->
     <div class="content">
@@ -191,7 +211,6 @@
     </div>
 </section>
 
-<!-- Info zu Cranio -->
 <section id="cranio-info">
     <div class="content">
         <h2 class="lang-de">Info zu Cranio-Sacraler Energiearbeit</h2>
@@ -219,7 +238,6 @@
     </div>
 </section>
 
-<!-- Abschnitt zur Cranio-Fernsitzung -->
 <section>
     <div class="content">
         <h2 class="lang-de">Über Cranio-Fernsitzungen</h2>
@@ -241,40 +259,35 @@
         <p class="lang-de">Bitte wähle einen Termin für deine Cranio-Fernsitzung:</p>
         <p class="lang-en" style="display: none;">Please choose an appointment for your Cranio remote session:</p>
         <form action="https://formspree.io/f/xnnargre" method="post">
-            <label for="date" class="lang-de">Datum und Uhrzeit:</label>
-            <label for="date" class="lang-en" style="display: none;">Date and time:</label>
-            <input type="datetime-local" id="date" name="termin" min="09:00" max="16:00" required>
-            <input type="text" name="name" placeholder="Dein Name" required class="lang-de">
-            <input type="text" name="name" placeholder="Your Name" required class="lang-en" style="display: none;">
-            <input type="email" name="email" placeholder="Deine E-Mail" required class="lang-de">
-            <input type="email" name="email" placeholder="Your Email" required class="lang-en" style="display: none;">
-            <button type="submit" class="button lang-de">Termin buchen</button>
-            <button type="submit" class="button lang-en" style="display: none;">Book Appointment</button>
+            <label for="date" class="lang-de">Wunschtermin (Werktags, 9-16 Uhr):</label>
+            <label for="date" class="lang-en" style="display: none;">Preferred Date (Weekdays, 9 AM - 4 PM):</label>
+            <input type="datetime-local" id="date" name="termin" required>
+
+            <label for="service">Wofür ist der Termin?</label>
+            <select id="service" name="service" onchange="updatePrice()" required>
+                <option value="Erstberatung">Kostenlose Erstberatung</option>
+                <option value="Life Coaching">Life Coaching</option>
+                <option value="Cranio-Sitzung">Cranio-Sitzung</option>
+                <option value="Notfall-Craniositzung">Notfall-Craniositzung</option>
+            </select>
+
+            <label for="price">Kosten:</label>
+            <input type="text" id="price" name="price" readonly value="Kostenlos">
+
+            <label for="name">Dein Name:</label>
+            <input type="text" id="name" name="name" placeholder="Dein Name" required>
+
+            <label for="email">Deine E-Mail:</label>
+            <input type="email" id="email" name="email" placeholder="Deine E-Mail" required>
+
+            <h3>Bezahlung</h3>
+            <div id="paypal-button-container"></div>
+
+            <button type="submit" class="button">Termin buchen</button>
         </form>
     </div>
 </section>
 
-<!-- Kontaktformular -->
-<section id="kontakt">
-    <div class="content">
-        <h2 class="lang-de">Kontaktformular</h2>
-        <h2 class="lang-en" style="display: none;">Contact Form</h2>
-        <p class="lang-de">Für Fragen oder weitere Informationen kannst du mich direkt kontaktieren:</p>
-        <p class="lang-en" style="display: none;">For questions or further information, you can contact me directly:</p>
-        <form action="https://formspree.io/f/moqppdgp" method="post">
-            <input type="text" name="name" placeholder="Dein Name" required class="lang-de">
-            <input type="text" name="name" placeholder="Your Name" required class="lang-en" style="display: none;">
-            <input type="email" name="email" placeholder="Deine E-Mail" required class="lang-de">
-            <input type="email" name="email" placeholder="Your Email" required class="lang-en" style="display: none;">
-            <textarea name="message" rows="5" placeholder="Deine Nachricht" required class="lang-de"></textarea>
-            <textarea name="message" rows="5" placeholder="Your Message" required class="lang-en" style="display: none;"></textarea>
-            <button type="submit" class="button lang-de">Nachricht senden</button>
-            <button type="submit" class="button lang-en" style="display: none;">Send Message</button>
-        </form>
-    </div>
-</section>
-
-<!-- Bewertungen -->
 <section class="reviews">
     <div class="content">
         <h2 class="lang-de">Kundenbewertungen</h2>
@@ -298,21 +311,61 @@
         <div class="review lang-en" style="display: none;">
             <p><strong>Sabine R.:</strong> "The cranio remote sessions helped me to release my inner blockages. Ely is very empathetic and professional."</p>
         </div>
+        <div class="review lang-de">
+            <p><strong>Anna T.:</strong> "Ich hätte nie gedacht, dass Fernsitzungen so wirksam sein können. Ely hat mir geholfen, mich von jahrelangen Schmerzen zu befreien."</p>
+        </div>
+        <div class="review lang-en" style="display: none;">
+            <p><strong>Anna T.:</strong> "I never thought remote sessions could be so effective. Ely helped me get rid of years of pain."</p>
+        </div>
+        <div class="review lang-de">
+            <p><strong>Thomas W.:</strong> "Ely ist sehr erfahren und einfühlsam. Ihre Fernsitzungen haben mein Leben verändert. Sehr empfehlenswert!"</p>
+        </div>
+        <div class="review lang-en" style="display: none;">
+            <p><strong>Thomas W.:</strong> "Ely is very experienced and empathetic. Her remote sessions changed my life. Highly recommended!"</p>
+        </div>
     </div>
 </section>
 
-<!-- Footer -->
 <footer>
     <p class="lang-de">&copy; 2024 Ely - Cranio-Fernsitzungen</p>
     <p class="lang-en" style="display: none;">&copy; 2024 Ely - Cranio Remote Sessions</p>
-
-    <!-- Social Media Links (Platzhalter) -->
-    <div>
-        <a href="https://instagram.com/energyhealingwithely" target="_blank">Instagram</a> |
-        <a href="https://www.tiktok.com/@energyhealingwithely?_t=8pUul8AuE1A&_r=1" target="_blank">Tiktok</a>
-    </div>
 </footer>
+
+<!-- PayPal Button -->
+<script src="https://www.paypal.com/sdk/js?client-id=AQobAJdnbMftRqZ8RsypRHQo8587fnBfLXbbQrvy uk8Dxn7qgoK70wPPkH1nGdcOzXOi_jRF6mBxMJ-y&currency=EUR"></script>
+<script>
+    paypal.Buttons({
+        createOrder: function(data, actions) {
+            var service = document.getElementById('service').value;
+            var amount;
+
+            if (service === 'Life Coaching') {
+                amount = '30.00';
+            } else if (service === 'Cranio-Sitzung') {
+                amount = '100.00';
+            } else if (service === 'Notfall-Craniositzung') {
+                amount = '199.00';
+            } else {
+                return actions.reject(); // Keine Zahlung für kostenlose Sitzungen
+            }
+
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        value: amount
+                    }
+                }]
+            });
+        },
+        onApprove: function(data, actions) {
+            return actions.order.capture().then(function(details) {
+                alert('Zahlung erfolgreich abgeschlossen. Vielen Dank, ' + details.payer.name.given_name + '!');
+            });
+        }
+    }).render('#paypal-button-container');
+</script>
 
 </body>
 </html>
+
 
