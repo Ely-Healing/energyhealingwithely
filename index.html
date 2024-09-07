@@ -126,11 +126,16 @@
                 width: 100px;
             }
         }
-        /* Me-Bild zentrieren */
+        /* Me-Bild zentrieren und rund machen */
         .centered-image {
             display: flex;
             justify-content: center;
             margin-top: 20px;
+        }
+        .centered-image img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
         }
     </style>
 
@@ -207,40 +212,13 @@
 
 <section id="about" class="about">
     <div class="centered-image">
-        <img src="me.jpg" alt="me"> <!-- Dein Bild, zentriert -->
+        <img src="me.jpg" alt="me"> <!-- Bild von dir, jetzt rund -->
     </div>
     <div class="content">
         <h2 class="lang-de">Über mich</h2>
         <h2 class="lang-en" style="display: none;">About me</h2>
         <p class="lang-de">Ich bin Ely, spezialisiert auf Energieheilung und Cranio-Fernsitzungen. Mit jahrelanger Erfahrung und einer tiefen Verbindung zur energetischen Arbeit helfe ich Menschen, ihre innere Balance zu finden und Heilung auf emotionaler, mentaler und körperlicher Ebene zu erfahren.</p>
         <p class="lang-en" style="display: none;">I am Ely, specialized in energy healing and cranio remote sessions. With years of experience and a deep connection to energetic work, I help people find their inner balance and experience healing on emotional, mental, and physical levels.</p>
-        <p class="lang-de">Meine Mission ist es, dich auf deiner Reise zu begleiten und mit meiner Expertise in der Energieheilung und Cranio-Arbeit einen Raum für Heilung und Wachstum zu schaffen. Jede Sitzung wird individuell auf deine Bedürfnisse abgestimmt. Ich bin Mutter von 3 wundervollen Kindern, Mathematikerin und Künstlerin.</p>
-        <p class="lang-en" style="display: none;">My mission is to accompany you on your journey and, with my expertise in energy healing and cranio work, create a space for healing and growth. Each session is tailored to your individual needs. I am the mother of 3 wonderful children, a mathematician, and an artist.</p>
-    </div>
-</section>
-
-<section id="cranio-info">
-    <div class="content">
-        <h2 class="lang-de">Info zu Cranio-Sacraler Energiearbeit</h2>
-        <h2 class="lang-en" style="display: none;">Info about Cranio-Sacral Energy Work</h2>
-        <p class="lang-de">Cranio-Sacrale Energiearbeit kann bei einer Vielzahl von physischen, emotionalen und psychischen Problemen unterstützend wirken. Hier sind einige Beispiele, bei denen diese Heilungsmethode angewendet werden kann:</p>
-        <p class="lang-en" style="display: none;">Cranio-sacral energy work can assist with a variety of physical, emotional, and mental issues. Here are some examples where this healing method can be applied:</p>
-        <ul>
-            <li class="lang-de"><strong>Physische Probleme:</strong> Chronische Schmerzen (Rücken, Nacken, Gelenke), Migräne und Kopfschmerzen, Schlafstörungen, Kiefergelenksstörungen (Bruxismus), Verletzungen und postoperative Erholung.</li>
-            <li class="lang-en" style="display: none;"><strong>Physical issues:</strong> Chronic pain (back, neck, joints), migraines and headaches, sleep disorders, jaw tension (Bruxism), injury recovery, and post-operative healing.</li>
-            <li class="lang-de"><strong>Emotionale und Psychische Probleme:</strong> Stress und Angst, Depression, Trauma, emotionale Blockaden.</li>
-            <li class="lang-en" style="display: none;"><strong>Emotional and mental issues:</strong> Stress and anxiety, depression, trauma, emotional blockages.</li>
-            <li class="lang-de"><strong>Allgemeine Gesundheitsförderung:</strong> Stärkung des Immunsystems, Förderung der Selbstheilungskräfte, Unterstützung bei chronischen Krankheiten.</li>
-            <li class="lang-en" style="display: none;"><strong>General health promotion:</strong> Boosting the immune system, promoting self-healing, supporting chronic illnesses.</li>
-            <li class="lang-de"><strong>Kinder und Säuglinge:</strong> Hilfe bei Schlafstörungen, Koliken, Entwicklungsstörungen.</li>
-            <li class="lang-en" style="display: none;"><strong>Children and infants:</strong> Help with sleep disorders, colic, developmental issues.</li>
-            <li class="lang-de"><strong>Schwangerschaft und Geburt:</strong> Unterstützung bei Schwangerschaftsbeschwerden, Vorbereitung auf die Geburt, postnatale Erholung.</li>
-            <li class="lang-en" style="display: none;"><strong>Pregnancy and birth:</strong> Support for pregnancy discomfort, preparation for birth, postnatal recovery.</li>
-            <li class="lang-de"><strong>Ältere Menschen:</strong> Linderung von Altersbeschwerden, Verbesserung der Lebensqualität.</li>
-            <li class="lang-en" style="display: none;"><strong>Elderly people:</strong> Relief from age-related complaints, improving quality of life.</li>
-            <li class="lang-de"><strong>Sterbebegleitung:</strong> Unterstützung im Sterbeprozess.</li>
-            <li class="lang-en" style="display: none;"><strong>End-of-life care:</strong> Support in the dying process.</li>
-        </ul>
     </div>
 </section>
 
@@ -334,14 +312,15 @@
     <p class="lang-en" style="display: none;">&copy; 2024 Ely - Cranio Remote Sessions</p>
 </footer>
 
-<!-- PayPal Button -->
-<script src="https://www.paypal.com/sdk/js?client-id=AQobAJdnbMftRqZ8RsypRHQo8587fnBfLXbbQrvy uk8Dxn7qgoK70wPPkH1nGdcOzXOi_jRF6mBxMJ-y&currency=EUR"></script>
+<!-- PayPal SDK -->
+<script src="https://www.paypal.com/sdk/js?client-id=**AQobAJdnbMftRqZ8RsypRHQo8587fnBfLXbbQrvy uk8Dxn7qgoK70wPPkH1nGdcOzXOi_jRF6mBxMJ-y**&currency=EUR"></script>
 <script>
     paypal.Buttons({
         createOrder: function(data, actions) {
             var service = document.getElementById('service').value;
             var amount;
 
+            // Preise je nach Service festlegen
             if (service === 'Life Coaching') {
                 amount = '30.00';
             } else if (service === 'Cranio-Sitzung') {
@@ -349,13 +328,13 @@
             } else if (service === 'Notfall-Craniositzung') {
                 amount = '199.00';
             } else {
-                return actions.reject(); // Keine Zahlung für kostenlose Sitzungen
+                return actions.reject(); // Keine Zahlung für kostenlose Erstberatungen
             }
 
             return actions.order.create({
                 purchase_units: [{
                     amount: {
-                        value: amount
+                        value: amount // Gesamtbetrag für die ausgewählte Sitzung
                     }
                 }]
             });
@@ -364,8 +343,14 @@
             return actions.order.capture().then(function(details) {
                 alert('Zahlung erfolgreich abgeschlossen. Vielen Dank, ' + details.payer.name.given_name + '!');
             });
+        },
+        onCancel: function(data) {
+            alert('Zahlung abgebrochen.');
+        },
+        onError: function(err) {
+            alert('Es gab einen Fehler bei der Bearbeitung Ihrer Zahlung. Bitte versuchen Sie es erneut.');
         }
-    }).render('#paypal-button-container');
+    }).render('#paypal-button-container'); // Rendern des PayPal Buttons in den Container
 </script>
 
 </body>
