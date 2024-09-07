@@ -126,6 +126,12 @@
                 width: 100px;
             }
         }
+        /* Me-Bild zentrieren */
+        .centered-image {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
     </style>
 
     <script>
@@ -200,7 +206,9 @@
 </header>
 
 <section id="about" class="about">
-    <img src="me.jpg" alt="me"> <!-- Füge hier dein Bild ein -->
+    <div class="centered-image">
+        <img src="me.jpg" alt="me"> <!-- Dein Bild, zentriert -->
+    </div>
     <div class="content">
         <h2 class="lang-de">Über mich</h2>
         <h2 class="lang-en" style="display: none;">About me</h2>
@@ -233,21 +241,6 @@
             <li class="lang-de"><strong>Sterbebegleitung:</strong> Unterstützung im Sterbeprozess.</li>
             <li class="lang-en" style="display: none;"><strong>End-of-life care:</strong> Support in the dying process.</li>
         </ul>
-        <p class="lang-de">Es wird empfohlen, direkt 3 Sitzungen zu buchen, um tiefere, langjährige Blockaden zu lösen. Jede Sitzung hilft dabei, die energetischen Blockaden Schicht für Schicht abzutragen und das Wohlbefinden zu verbessern. In einem kostenlosen Beratungsgespräch können wir gemeinsam herausfinden, ob du mehr als eine Sitzung benötigst.</p>
-        <p class="lang-en" style="display: none;">It is recommended to book 3 sessions in advance to resolve deeper, long-standing blockages. Each session helps to remove energetic blockages layer by layer and improve well-being. In a free consultation, we can determine together whether you need more than one session.</p>
-    </div>
-</section>
-
-<section>
-    <div class="content">
-        <h2 class="lang-de">Über Cranio-Fernsitzungen</h2>
-        <h2 class="lang-en" style="display: none;">About Cranio Remote Sessions</h2>
-        <p class="lang-de">Cranio-Fernsitzungen basieren auf der Annahme, dass das menschliche Energiesystem auch über große Distanzen hinweg harmonisiert werden kann. Durch den achtsamen Fokus und die energetische Verbindung können Blockaden im Körper gelöst und das Gleichgewicht wiederhergestellt werden.</p>
-        <p class="lang-en" style="display: none;">Cranio remote sessions are based on the belief that the human energy system can be harmonized even over long distances. Through mindful focus and energetic connection, blockages in the body can be resolved, and balance can be restored.</p>
-        <p class="lang-de">Während einer Fernsitzung liegst du bequem in deinem eigenen Raum, und ich konzentriere mich darauf, mit deinem Energiefeld zu arbeiten. Jede Sitzung beginnt mit einem kurzen Vorgespräch, in dem du deine Anliegen oder körperlichen Beschwerden schildern kannst.</p>
-        <p class="lang-en" style="display: none;">During a remote session, you lie comfortably in your own space, and I focus on working with your energy field. Each session begins with a brief conversation where you can discuss your concerns or physical complaints.</p>
-        <p class="lang-de">Die Sitzungen dauern in der Regel 60-90 Minuten, und am Ende erhältst du ein Feedback über den Prozess und die beobachteten energetischen Veränderungen.</p>
-        <p class="lang-en" style="display: none;">Sessions typically last 60-90 minutes, and at the end, you will receive feedback on the process and the energetic changes observed.</p>
     </div>
 </section>
 
@@ -280,6 +273,11 @@
             <label for="email">Deine E-Mail:</label>
             <input type="email" id="email" name="email" placeholder="Deine E-Mail" required>
 
+            <!-- Anmerkungen und Wünsche -->
+            <label for="remarks" class="lang-de">Anmerkungen und Wünsche:</label>
+            <label for="remarks" class="lang-en" style="display: none;">Remarks and Wishes:</label>
+            <textarea id="remarks" name="remarks" rows="4" placeholder="Teile hier deine Wünsche oder Anmerkungen mit"></textarea>
+
             <h3>Bezahlung</h3>
             <div id="paypal-button-container"></div>
 
@@ -299,30 +297,35 @@
         <div class="review lang-en" style="display: none;">
             <p><strong>Maria S.:</strong> "The remote session with Ely helped me immensely. I feel much more balanced and in harmony with myself."</p>
         </div>
+
         <div class="review lang-de">
             <p><strong>Johannes K.:</strong> "Ich war anfangs skeptisch, aber die Ergebnisse sprechen für sich. Nach jeder Sitzung fühle ich mich deutlich entspannter und voller Energie."</p>
         </div>
         <div class="review lang-en" style="display: none;">
             <p><strong>Johannes K.:</strong> "I was initially skeptical, but the results speak for themselves. After each session, I feel significantly more relaxed and energized."</p>
         </div>
+
         <div class="review lang-de">
             <p><strong>Sabine R.:</strong> "Die Cranio-Fernsitzungen haben mir geholfen, meine inneren Blockaden zu lösen. Ely ist sehr einfühlsam und professionell."</p>
         </div>
         <div class="review lang-en" style="display: none;">
             <p><strong>Sabine R.:</strong> "The cranio remote sessions helped me to release my inner blockages. Ely is very empathetic and professional."</p>
         </div>
+
         <div class="review lang-de">
             <p><strong>Anna T.:</strong> "Ich hätte nie gedacht, dass Fernsitzungen so wirksam sein können. Ely hat mir geholfen, mich von jahrelangen Schmerzen zu befreien."</p>
         </div>
         <div class="review lang-en" style="display: none;">
             <p><strong>Anna T.:</strong> "I never thought remote sessions could be so effective. Ely helped me get rid of years of pain."</p>
         </div>
+
         <div class="review lang-de">
             <p><strong>Thomas W.:</strong> "Ely ist sehr erfahren und einfühlsam. Ihre Fernsitzungen haben mein Leben verändert. Sehr empfehlenswert!"</p>
         </div>
         <div class="review lang-en" style="display: none;">
             <p><strong>Thomas W.:</strong> "Ely is very experienced and empathetic. Her remote sessions changed my life. Highly recommended!"</p>
         </div>
+
     </div>
 </section>
 
@@ -367,5 +370,3 @@
 
 </body>
 </html>
-
-
