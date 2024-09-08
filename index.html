@@ -3,14 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Energieheilung - Cranio-Fernsitzungen</title>
-
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Energieheilung und Cranio-Fernsitzungen mit Ely. Finde dein inneres Gleichgewicht und erlebe Heilung auf emotionaler, mentaler und körperlicher Ebene.">
-    <meta name="keywords" content="Energieheilung, Cranio, Fernsitzungen, spirituelle Heilung, Ely, Heilarbeit">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <title>Terminbuchung - Cranio-Fernsitzungen</title>
 
     <style>
         body {
@@ -30,19 +23,10 @@
             color: #ffd700;
             background: rgba(0, 0, 0, 0.6);
         }
-        header img {
-            width: 150px;
-            border-radius: 50%;
-        }
         h1 {
             font-family: 'Great Vibes', cursive;
             font-size: 64px;
             margin: 20px 0;
-        }
-        h2 {
-            font-family: 'Great Vibes', cursive;
-            font-size: 42px;
-            color: #ffd700;
         }
         section {
             padding: 20px;
@@ -69,23 +53,6 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
-        form button {
-            background-color: #4b0082;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.6);
-            color: #ffd700;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
         .reviews {
             margin-top: 20px;
             background-color: rgba(255, 255, 255, 0.8);
@@ -99,43 +66,14 @@
             border-radius: 5px;
             border-left: 5px solid #ffd700;
         }
-        .language-switch img {
-            width: 50px;
-            height: 35px;
-            margin: 10px;
-            cursor: pointer;
-        }
-        nav {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        nav a {
-            margin: 0 10px;
-            color: #4b0082;
-            text-decoration: none;
-            font-size: 18px;
-        }
-        @media (max-width: 768px) {
-            h1, h2 {
-                font-size: 36px;
-            }
-            .content {
-                padding: 10px;
-            }
-            img {
-                width: 100px;
-            }
-        }
-        /* Me-Bild zentrieren und rund machen */
-        .centered-image {
-            display: flex;
-            justify-content: center;
+        .social-links {
             margin-top: 20px;
         }
-        .centered-image img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
+        .social-links a {
+            margin: 0 10px;
+            color: #4b0082;
+            font-size: 20px;
+            text-decoration: none;
         }
     </style>
 
@@ -146,9 +84,9 @@
             var price;
 
             if (service === 'Life Coaching') {
-                price = '30 Euro (30 Minuten)';
+                price = '30 Euro';
             } else if (service === 'Cranio-Sitzung') {
-                price = '100 Euro';
+                price = '110 Euro';
             } else if (service === 'Notfall-Craniositzung') {
                 price = '199 Euro';
             } else {
@@ -174,93 +112,80 @@
                 }
             });
         }
-
-        function switchLanguage(language) {
-            var elementsDe = document.querySelectorAll('.lang-de');
-            var elementsEn = document.querySelectorAll('.lang-en');
-            
-            if (language === 'de') {
-                elementsDe.forEach(function(el) { el.style.display = 'block'; });
-                elementsEn.forEach(function(el) { el.style.display = 'none'; });
-            } else {
-                elementsDe.forEach(function(el) { el.style.display = 'none'; });
-                elementsEn.forEach(function(el) { el.style.display = 'block'; });
-            }
-        }
     </script>
 </head>
 <body onload="restrictTimes()">
 
-<!-- Sprachumschaltung mit Flaggen -->
-<div class="language-switch">
-    <img src="deutschland-flagge.png" alt="Deutsch" onclick="switchLanguage('de')">
-    <img src="uk-flagge.png" alt="English" onclick="switchLanguage('en')">
-</div>
-
-<!-- Navigation -->
-<nav>
-    <a href="#about">Über mich</a> | 
-    <a href="#cranio-info">Cranio Sitzungen</a> | 
-    <a href="#kontakt">Kontakt</a>
-</nav>
-
 <header>
-    <img src="logo.jpg" alt="Logo"> <!-- Dein Logo -->
-    <h1 class="lang-de">Cranio-Fernsitzungen mit Ely</h1>
-    <h1 class="lang-en" style="display: none;">Cranio Remote Sessions with Ely</h1>
+    <h1 class="lang-de">Terminbuchung - Cranio-Fernsitzungen</h1>
+    <h1 class="lang-en" style="display: none;">Book an Appointment - Cranio Remote Sessions</h1>
 </header>
 
-<section id="about" class="about">
-    <div class="centered-image">
-        <img src="me.jpg" alt="me"> <!-- Bild von dir, jetzt rund -->
-    </div>
-    <div class="content">
-        <h2 class="lang-de">Über mich</h2>
-        <h2 class="lang-en" style="display: none;">About me</h2>
-        <p class="lang-de">Ich bin Ely, spezialisiert auf Energieheilung und Cranio-Fernsitzungen. Mit jahrelanger Erfahrung und einer tiefen Verbindung zur energetischen Arbeit helfe ich Menschen, ihre innere Balance zu finden und Heilung auf emotionaler, mentaler und körperlicher Ebene zu erfahren.</p>
-        <p class="lang-en" style="display: none;">I am Ely, specialized in energy healing and cranio remote sessions. With years of experience and a deep connection to energetic work, I help people find their inner balance and experience healing on emotional, mental, and physical levels.</p>
-    </div>
-</section>
-
-<!-- Terminbuchung -->
 <section>
     <div class="content">
-        <h2 class="lang-de">Terminbuchung</h2>
-        <h2 class="lang-en" style="display: none;">Book an Appointment</h2>
-        <p class="lang-de">Bitte wähle einen Termin für deine Cranio-Fernsitzung:</p>
-        <p class="lang-en" style="display: none;">Please choose an appointment for your Cranio remote session:</p>
-        <form action="https://formspree.io/f/xnnargre" method="post">
+        <h2 class="lang-de">Bitte fülle das Formular aus, um einen Termin zu buchen:</h2>
+        <h2 class="lang-en" style="display: none;">Please fill out the form to book an appointment:</h2>
+
+        <form action="confirmation.html" method="post"> <!-- Leitet zur Bestätigungsseite weiter -->
             <label for="date" class="lang-de">Wunschtermin (Werktags, 9-16 Uhr):</label>
             <label for="date" class="lang-en" style="display: none;">Preferred Date (Weekdays, 9 AM - 4 PM):</label>
             <input type="datetime-local" id="date" name="termin" required>
 
-            <label for="service">Wofür ist der Termin?</label>
+            <label for="service" class="lang-de">Wofür ist der Termin?</label>
+            <label for="service" class="lang-en" style="display: none;">What is the appointment for?</label>
             <select id="service" name="service" onchange="updatePrice()" required>
-                <option value="Erstberatung">Kostenlose Erstberatung</option>
+                <option value="Erstberatung" class="lang-de">Kostenlose Erstberatung</option>
+                <option value="Erstberatung" class="lang-en" style="display: none;">Free initial consultation</option>
                 <option value="Life Coaching">Life Coaching</option>
                 <option value="Cranio-Sitzung">Cranio-Sitzung</option>
                 <option value="Notfall-Craniositzung">Notfall-Craniositzung</option>
             </select>
 
-            <label for="price">Kosten:</label>
+            <label for="price" class="lang-de">Kosten:</label>
+            <label for="price" class="lang-en" style="display: none;">Cost:</label>
             <input type="text" id="price" name="price" readonly value="Kostenlos">
 
-            <label for="name">Dein Name:</label>
+            <label for="name" class="lang-de">Dein Name:</label>
+            <label for="name" class="lang-en" style="display: none;">Your Name:</label>
             <input type="text" id="name" name="name" placeholder="Dein Name" required>
 
-            <label for="email">Deine E-Mail:</label>
+            <label for="email" class="lang-de">Deine E-Mail:</label>
+            <label for="email" class="lang-en" style="display: none;">Your Email:</label>
             <input type="email" id="email" name="email" placeholder="Deine E-Mail" required>
 
-            <!-- Anmerkungen und Wünsche -->
             <label for="remarks" class="lang-de">Anmerkungen und Wünsche:</label>
             <label for="remarks" class="lang-en" style="display: none;">Remarks and Wishes:</label>
             <textarea id="remarks" name="remarks" rows="4" placeholder="Teile hier deine Wünsche oder Anmerkungen mit"></textarea>
 
-            <h3>Bezahlung</h3>
-            <div id="paypal-button-container"></div>
-
-            <button type="submit" class="button">Termin buchen</button>
+            <button type="submit" class="button lang-de">Termin buchen</button>
+            <button type="submit" class="button lang-en" style="display: none;">Book Appointment</button>
         </form>
+    </div>
+</section>
+
+<!-- Über mich -->
+<section id="about" class="about">
+    <div class="content">
+        <h2 class="lang-de">Über mich</h2>
+        <h2 class="lang-en" style="display: none;">About me</h2>
+        <p class="lang-de">Ich bin Ely, spezialisiert auf Energieheilung und Cranio-Fernsitzungen. Mit jahrelanger Erfahrung und einer tiefen Verbindung zur energetischen Arbeit helfe ich Menschen, ihre innere Balance zu finden und Heilung auf emotionaler, mentaler und körperlicher Ebene zu erfahren.</p>
+        <p class="lang-en" style="display: none;">I am Ely, specialized in energy healing and cranio remote sessions. With years of experience and a deep connection to energetic work, I help people find their inner balance and experience healing on emotional, mental, and physical levels.</p>
+        <p class="lang-de">Meine Mission ist es, dich auf deiner Reise zu begleiten und mit meiner Expertise in der Energieheilung und Cranio-Arbeit einen Raum für Heilung und Wachstum zu schaffen. Jede Sitzung wird individuell auf deine Bedürfnisse abgestimmt. Ich bin Mutter von 3 wundervollen Kindern, Mathematikerin und Künstlerin.</p>
+        <p class="lang-en" style="display: none;">My mission is to accompany you on your journey and, with my expertise in energy healing and cranio work, create a space for healing and growth. Each session is tailored to your individual needs. I am the mother of 3 wonderful children, a mathematician, and an artist.</p>
+    </div>
+</section>
+
+<!-- Über Cranio -->
+<section>
+    <div class="content">
+        <h2 class="lang-de">Über Cranio-Fernsitzungen</h2>
+        <h2 class="lang-en" style="display: none;">About Cranio Remote Sessions</h2>
+        <p class="lang-de">Cranio-Fernsitzungen basieren auf der Annahme, dass das menschliche Energiesystem auch über große Distanzen hinweg harmonisiert werden kann. Durch den achtsamen Fokus und die energetische Verbindung können Blockaden im Körper gelöst und das Gleichgewicht wiederhergestellt werden.</p>
+        <p class="lang-en" style="display: none;">Cranio remote sessions are based on the belief that the human energy system can be harmonized even over long distances. Through mindful focus and energetic connection, blockages in the body can be resolved, and balance can be restored.</p>
+        <p class="lang-de">Während einer Fernsitzung liegst du bequem in deinem eigenen Raum, und ich konzentriere mich darauf, mit deinem Energiefeld zu arbeiten. Jede Sitzung beginnt mit einem kurzen Vorgespräch, in dem du deine Anliegen oder körperlichen Beschwerden schildern kannst.</p>
+        <p class="lang-en" style="display: none;">During a remote session, you lie comfortably in your own space, and I focus on working with your energy field. Each session begins with a brief conversation where you can discuss your concerns or physical complaints.</p>
+        <p class="lang-de">Die Sitzungen dauern in der Regel 60-90 Minuten, und am Ende erhältst du ein Feedback über den Prozess und die beobachteten energetischen Veränderungen.</p>
+        <p class="lang-en" style="display: none;">Sessions typically last 60-90 minutes, and at the end, you will receive feedback on the process and the energetic changes observed.</p>
     </div>
 </section>
 
@@ -275,83 +200,45 @@
         <div class="review lang-en" style="display: none;">
             <p><strong>Maria S.:</strong> "The remote session with Ely helped me immensely. I feel much more balanced and in harmony with myself."</p>
         </div>
-
         <div class="review lang-de">
             <p><strong>Johannes K.:</strong> "Ich war anfangs skeptisch, aber die Ergebnisse sprechen für sich. Nach jeder Sitzung fühle ich mich deutlich entspannter und voller Energie."</p>
         </div>
         <div class="review lang-en" style="display: none;">
             <p><strong>Johannes K.:</strong> "I was initially skeptical, but the results speak for themselves. After each session, I feel significantly more relaxed and energized."</p>
         </div>
-
         <div class="review lang-de">
             <p><strong>Sabine R.:</strong> "Die Cranio-Fernsitzungen haben mir geholfen, meine inneren Blockaden zu lösen. Ely ist sehr einfühlsam und professionell."</p>
         </div>
         <div class="review lang-en" style="display: none;">
             <p><strong>Sabine R.:</strong> "The cranio remote sessions helped me to release my inner blockages. Ely is very empathetic and professional."</p>
         </div>
-
         <div class="review lang-de">
             <p><strong>Anna T.:</strong> "Ich hätte nie gedacht, dass Fernsitzungen so wirksam sein können. Ely hat mir geholfen, mich von jahrelangen Schmerzen zu befreien."</p>
         </div>
         <div class="review lang-en" style="display: none;">
             <p><strong>Anna T.:</strong> "I never thought remote sessions could be so effective. Ely helped me get rid of years of pain."</p>
         </div>
-
         <div class="review lang-de">
             <p><strong>Thomas W.:</strong> "Ely ist sehr erfahren und einfühlsam. Ihre Fernsitzungen haben mein Leben verändert. Sehr empfehlenswert!"</p>
         </div>
         <div class="review lang-en" style="display: none;">
             <p><strong>Thomas W.:</strong> "Ely is very experienced and empathetic. Her remote sessions changed my life. Highly recommended!"</p>
         </div>
-
     </div>
 </section>
 
+<!-- Social Media Links -->
 <footer>
+    <div class="social-links">
+        <a href="https://www.instagram.com/dein_instagram_profil" target="_blank" class="lang-de">Instagram</a>
+        <a href="https://www.instagram.com/your_instagram_profile" target="_blank" class="lang-en" style="display: none;">Instagram</a>
+        <a href="https://www.tiktok.com/@dein_tiktok_profil" target="_blank" class="lang-de">TikTok</a>
+        <a href="https://www.tiktok.com/@your_tiktok_profile" target="_blank" class="lang-en" style="display: none;">TikTok</a>
+    </div>
     <p class="lang-de">&copy; 2024 Ely - Cranio-Fernsitzungen</p>
     <p class="lang-en" style="display: none;">&copy; 2024 Ely - Cranio Remote Sessions</p>
 </footer>
 
-<!-- PayPal SDK -->
-<script src="https://www.paypal.com/sdk/js?client-id=**AQobAJdnbMftRqZ8RsypRHQo8587fnBfLXbbQrvy uk8Dxn7qgoK70wPPkH1nGdcOzXOi_jRF6mBxMJ-y**&currency=EUR"></script>
-<script>
-    paypal.Buttons({
-        createOrder: function(data, actions) {
-            var service = document.getElementById('service').value;
-            var amount;
-
-            // Preise je nach Service festlegen
-            if (service === 'Life Coaching') {
-                amount = '30.00';
-            } else if (service === 'Cranio-Sitzung') {
-                amount = '100.00';
-            } else if (service === 'Notfall-Craniositzung') {
-                amount = '199.00';
-            } else {
-                return actions.reject(); // Keine Zahlung für kostenlose Erstberatungen
-            }
-
-            return actions.order.create({
-                purchase_units: [{
-                    amount: {
-                        value: amount // Gesamtbetrag für die ausgewählte Sitzung
-                    }
-                }]
-            });
-        },
-        onApprove: function(data, actions) {
-            return actions.order.capture().then(function(details) {
-                alert('Zahlung erfolgreich abgeschlossen. Vielen Dank, ' + details.payer.name.given_name + '!');
-            });
-        },
-        onCancel: function(data) {
-            alert('Zahlung abgebrochen.');
-        },
-        onError: function(err) {
-            alert('Es gab einen Fehler bei der Bearbeitung Ihrer Zahlung. Bitte versuchen Sie es erneut.');
-        }
-    }).render('#paypal-button-container'); // Rendern des PayPal Buttons in den Container
-</script>
-
 </body>
 </html>
+

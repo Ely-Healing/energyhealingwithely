@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zahlung - Cranio-Fernsitzungen</title>
+
+    <style>
+        body {
+            font-family: 'Lora', serif;
+            background-color: #f5f5dc;
+            margin: 0;
+            padding: 0;
+            color: #4b0082;
+            text-align: center;
+        }
+        .content {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h1, h2 {
+            font-family: 'Great Vibes', cursive;
+            color: #ffd700;
+        }
+        .button {
+            background-color: #4b0082;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="content">
+    <h1 class="lang-de">Vielen Dank für deine Buchung!</h1>
+    <h1 class="lang-en" style="display: none;">Thank you for your booking!</h1>
+
+    <p class="lang-de">Bitte tätige jetzt die Zahlung, um den Termin zu bestätigen.</p>
+    <p class="lang-en" style="display: none;">Please complete the payment to confirm your appointment.</p>
+
+    <!-- PayPal Button -->
+    <div id="paypal-button-container"></div>
+</div>
+
+<!-- PayPal SDK -->
+<script src="https://www.paypal.com/sdk/js?client-id=**AQobAJdnbMftRqZ8RsypRHQo8587fnBfLXbbQrvy uk8Dxn7qgoK70wPPkH1nGdcOzXOi_jRF6mBxMJ-y**&currency=EUR"></script>
+<script>
+    paypal.Buttons({
+        createOrder: function(data, actions) {
+            // Beispielbetrag für eine Cranio-Sitzung, kann je nach Service dynamisch angepasst werden
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        value: '100.00' // Beispielbetrag
+                    }
+                }]
+            });
+        },
+        onApprove: function(data, actions) {
+            return actions.order.capture().then(function(details) {
+                alert('Zahlung erfolgreich abgeschlossen. Vielen Dank, ' + details.payer.name.given_name + '!');
+                window.location.href = "erfolg.html"; // Erfolgsseite nach Zahlung
+            });
+        }
+    }).render('#paypal-button-container');
+</script>
+
+</body>
+</html>
