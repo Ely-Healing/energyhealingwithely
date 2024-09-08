@@ -38,6 +38,14 @@
             max-width: 800px;
             margin: 0 auto;
         }
+        .centered-image img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
         .button {
             background-color: #4b0082;
             color: white;
@@ -86,7 +94,7 @@
             if (service === 'Life Coaching') {
                 price = '30 Euro';
             } else if (service === 'Cranio-Sitzung') {
-                price = '110 Euro';
+                price = '100 Euro';
             } else if (service === 'Notfall-Craniositzung') {
                 price = '199 Euro';
             } else {
@@ -117,16 +125,31 @@
 <body onload="restrictTimes()">
 
 <header>
-    <h1 class="lang-de">Terminbuchung - Cranio-Fernsitzungen</h1>
-    <h1 class="lang-en" style="display: none;">Book an Appointment - Cranio Remote Sessions</h1>
+    <h1 class="lang-de">Cranio-Fernsitzungen mit Ely</h1>
+    <h1 class="lang-en" style="display: none;">Cranio Remote Sessions with Ely</h1>
 </header>
 
+<!-- Über mich -->
+<section id="about" class="about">
+    <div class="centered-image">
+        <img src="me.jpg" alt="Ely's Bild">
+    </div>
+    <div class="content">
+        <h2 class="lang-de">Über mich</h2>
+        <h2 class="lang-en" style="display: none;">About me</h2>
+        <p class="lang-de">Ich bin Ely, spezialisiert auf Energieheilung und Cranio-Fernsitzungen. Mit jahrelanger Erfahrung und einer tiefen Verbindung zur energetischen Arbeit helfe ich Menschen, ihre innere Balance zu finden und Heilung auf emotionaler, mentaler und körperlicher Ebene zu erfahren.</p>
+        <p class="lang-en" style="display: none;">I am Ely, specialized in energy healing and cranio remote sessions. With years of experience and a deep connection to energetic work, I help people find their inner balance and experience healing on emotional, mental, and physical levels.</p>
+        <p class="lang-de">Meine Mission ist es, dich auf deiner Reise zu begleiten und mit meiner Expertise in der Energieheilung und Cranio-Arbeit einen Raum für Heilung und Wachstum zu schaffen. Jede Sitzung wird individuell auf deine Bedürfnisse abgestimmt. Ich bin Mutter von 3 wundervollen Kindern, Mathematikerin und Künstlerin.</p>
+        <p class="lang-en" style="display: none;">My mission is to accompany you on your journey and, with my expertise in energy healing and cranio work, create a space for healing and growth. Each session is tailored to your individual needs. I am the mother of 3 wonderful children, a mathematician, and an artist.</p>
+    </div>
+</section>
+
+<!-- Terminbuchung -->
 <section>
     <div class="content">
-        <h2 class="lang-de">Bitte fülle das Formular aus, um einen Termin zu buchen:</h2>
-        <h2 class="lang-en" style="display: none;">Please fill out the form to book an appointment:</h2>
-
-        <form action="confirmation.html" method="post"> <!-- Leitet zur Bestätigungsseite weiter -->
+        <h2 class="lang-de">Terminbuchung</h2>
+        <h2 class="lang-en" style="display: none;">Book an Appointment</h2>
+        <form action="confirmation.html" method="post">
             <label for="date" class="lang-de">Wunschtermin (Werktags, 9-16 Uhr):</label>
             <label for="date" class="lang-en" style="display: none;">Preferred Date (Weekdays, 9 AM - 4 PM):</label>
             <input type="datetime-local" id="date" name="termin" required>
@@ -160,32 +183,6 @@
             <button type="submit" class="button lang-de">Termin buchen</button>
             <button type="submit" class="button lang-en" style="display: none;">Book Appointment</button>
         </form>
-    </div>
-</section>
-
-<!-- Über mich -->
-<section id="about" class="about">
-    <div class="content">
-        <h2 class="lang-de">Über mich</h2>
-        <h2 class="lang-en" style="display: none;">About me</h2>
-        <p class="lang-de">Ich bin Ely, spezialisiert auf Energieheilung und Cranio-Fernsitzungen. Mit jahrelanger Erfahrung und einer tiefen Verbindung zur energetischen Arbeit helfe ich Menschen, ihre innere Balance zu finden und Heilung auf emotionaler, mentaler und körperlicher Ebene zu erfahren.</p>
-        <p class="lang-en" style="display: none;">I am Ely, specialized in energy healing and cranio remote sessions. With years of experience and a deep connection to energetic work, I help people find their inner balance and experience healing on emotional, mental, and physical levels.</p>
-        <p class="lang-de">Meine Mission ist es, dich auf deiner Reise zu begleiten und mit meiner Expertise in der Energieheilung und Cranio-Arbeit einen Raum für Heilung und Wachstum zu schaffen. Jede Sitzung wird individuell auf deine Bedürfnisse abgestimmt. Ich bin Mutter von 3 wundervollen Kindern, Mathematikerin und Künstlerin.</p>
-        <p class="lang-en" style="display: none;">My mission is to accompany you on your journey and, with my expertise in energy healing and cranio work, create a space for healing and growth. Each session is tailored to your individual needs. I am the mother of 3 wonderful children, a mathematician, and an artist.</p>
-    </div>
-</section>
-
-<!-- Über Cranio -->
-<section>
-    <div class="content">
-        <h2 class="lang-de">Über Cranio-Fernsitzungen</h2>
-        <h2 class="lang-en" style="display: none;">About Cranio Remote Sessions</h2>
-        <p class="lang-de">Cranio-Fernsitzungen basieren auf der Annahme, dass das menschliche Energiesystem auch über große Distanzen hinweg harmonisiert werden kann. Durch den achtsamen Fokus und die energetische Verbindung können Blockaden im Körper gelöst und das Gleichgewicht wiederhergestellt werden.</p>
-        <p class="lang-en" style="display: none;">Cranio remote sessions are based on the belief that the human energy system can be harmonized even over long distances. Through mindful focus and energetic connection, blockages in the body can be resolved, and balance can be restored.</p>
-        <p class="lang-de">Während einer Fernsitzung liegst du bequem in deinem eigenen Raum, und ich konzentriere mich darauf, mit deinem Energiefeld zu arbeiten. Jede Sitzung beginnt mit einem kurzen Vorgespräch, in dem du deine Anliegen oder körperlichen Beschwerden schildern kannst.</p>
-        <p class="lang-en" style="display: none;">During a remote session, you lie comfortably in your own space, and I focus on working with your energy field. Each session begins with a brief conversation where you can discuss your concerns or physical complaints.</p>
-        <p class="lang-de">Die Sitzungen dauern in der Regel 60-90 Minuten, und am Ende erhältst du ein Feedback über den Prozess und die beobachteten energetischen Veränderungen.</p>
-        <p class="lang-en" style="display: none;">Sessions typically last 60-90 minutes, and at the end, you will receive feedback on the process and the energetic changes observed.</p>
     </div>
 </section>
 
@@ -230,10 +227,10 @@
 <!-- Social Media Links -->
 <footer>
     <div class="social-links">
-        <a href="https://www.instagram.com/dein_instagram_profil" target="_blank" class="lang-de">Instagram</a>
-        <a href="https://www.instagram.com/your_instagram_profile" target="_blank" class="lang-en" style="display: none;">Instagram</a>
-        <a href="https://www.tiktok.com/@dein_tiktok_profil" target="_blank" class="lang-de">TikTok</a>
-        <a href="https://www.tiktok.com/@your_tiktok_profile" target="_blank" class="lang-en" style="display: none;">TikTok</a>
+        <a href="https://www.instagram.com/energyhealingwithely" target="_blank" class="lang-de">Instagram</a>
+        <a href="https://www.instagram.com/energyhealingwithely" target="_blank" class="lang-en" style="display: none;">Instagram</a>
+        <a href="https://www.tiktok.com/@energyhealingwithely" target="_blank" class="lang-de">TikTok</a>
+        <a href="https://www.tiktok.com/@energyhealingwithely" target="_blank" class="lang-en" style="display: none;">TikTok</a>
     </div>
     <p class="lang-de">&copy; 2024 Ely - Cranio-Fernsitzungen</p>
     <p class="lang-en" style="display: none;">&copy; 2024 Ely - Cranio Remote Sessions</p>
@@ -241,4 +238,3 @@
 
 </body>
 </html>
-
