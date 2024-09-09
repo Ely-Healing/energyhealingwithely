@@ -50,15 +50,15 @@
 </div>
 
 <!-- PayPal SDK -->
-<script src="https://www.paypal.com/sdk/js?client-id=**AQobAJdnbMftRqZ8RsypRHQo8587fnBfLXbbQrvyuk8Dxn7qgoK70wPPkH1nGdcOzXOi_jRF6mBxMJ-y**&currency=EUR"></script>
+<script src="https://www.paypal.com/sdk/js?client-id=AQobAJdnbMftRqZ8RsypRHQo8587fnBfLXbbQrvyuk8Dxn7qgoK70wPPkH1nGdcOzXOi_jRF6mBxMJ-y&currency=EUR"></script>
+
 <script>
     paypal.Buttons({
         createOrder: function(data, actions) {
-            // Beispielbetrag für eine Cranio-Sitzung, kann je nach Service dynamisch angepasst werden
             return actions.order.create({
                 purchase_units: [{
                     amount: {
-                        value: '100.00' // Beispielbetrag
+                        value: '100.00' // Beispielbetrag, anpassen je nach Service
                     }
                 }]
             });
